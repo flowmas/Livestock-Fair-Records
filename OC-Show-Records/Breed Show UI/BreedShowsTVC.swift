@@ -16,7 +16,6 @@ class BreedShowsTVC: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.view.backgroundColor = .systemBackground
         let url = URL(string: "http://livestock-fair-records.com/get-breedshows.php")!
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -70,6 +69,7 @@ class BreedShowsTVC: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PushClassEntryScreen" {
             let destinationVC = segue.destination as! ClassEntryTVC
+            destinationVC.breedShow = self.breedShows![self.tableView.indexPathForSelectedRow!.row]
         }
     }
 }

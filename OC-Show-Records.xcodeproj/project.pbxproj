@@ -25,6 +25,11 @@
 		9E713843266B19A200039BB4 /* ClassEntryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713842266B19A200039BB4 /* ClassEntryTVC.swift */; };
 		9E713845266B19D400039BB4 /* ClassEntryDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713844266B19D400039BB4 /* ClassEntryDetailsVC.swift */; };
 		9E713847266B1A0200039BB4 /* BreedShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713846266B1A0200039BB4 /* BreedShow.swift */; };
+		9E713849266BF2E500039BB4 /* EditOCShowTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713848266BF2E500039BB4 /* EditOCShowTVC.swift */; };
+		9E71384B266BFA8500039BB4 /* AddAnimalTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71384A266BFA8500039BB4 /* AddAnimalTVC.swift */; };
+		9E71384D266BFE3200039BB4 /* AllAnimalsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71384C266BFE3200039BB4 /* AllAnimalsTVC.swift */; };
+		9E71384F266BFEB300039BB4 /* AllAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71384E266BFEB300039BB4 /* AllAnimal.swift */; };
+		9E713851266C359C00039BB4 /* ClassEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713850266C359C00039BB4 /* ClassEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		9E713842266B19A200039BB4 /* ClassEntryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassEntryTVC.swift; sourceTree = "<group>"; };
 		9E713844266B19D400039BB4 /* ClassEntryDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassEntryDetailsVC.swift; sourceTree = "<group>"; };
 		9E713846266B1A0200039BB4 /* BreedShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedShow.swift; sourceTree = "<group>"; };
+		9E713848266BF2E500039BB4 /* EditOCShowTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOCShowTVC.swift; sourceTree = "<group>"; };
+		9E71384A266BFA8500039BB4 /* AddAnimalTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimalTVC.swift; sourceTree = "<group>"; };
+		9E71384C266BFE3200039BB4 /* AllAnimalsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnimalsTVC.swift; sourceTree = "<group>"; };
+		9E71384E266BFEB300039BB4 /* AllAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnimal.swift; sourceTree = "<group>"; };
+		9E713850266C359C00039BB4 /* ClassEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 			children = (
 				9E71382C266AB76C00039BB4 /* OCShowTVC.swift */,
 				9E713830266ABB2200039BB4 /* OCShowDetailsVC.swift */,
+				9E713848266BF2E500039BB4 /* EditOCShowTVC.swift */,
 			);
 			path = "OC Show UI";
 			sourceTree = "<group>";
@@ -121,6 +132,8 @@
 				9E71382E266ABA3600039BB4 /* OCShow.swift */,
 				9E71383E266B080F00039BB4 /* Animal.swift */,
 				9E713846266B1A0200039BB4 /* BreedShow.swift */,
+				9E71384E266BFEB300039BB4 /* AllAnimal.swift */,
+				9E713850266C359C00039BB4 /* ClassEntry.swift */,
 			);
 			path = "JSON Structs";
 			sourceTree = "<group>";
@@ -130,6 +143,8 @@
 			children = (
 				9E71383A266B047500039BB4 /* AnimalDetailsVC.swift */,
 				9E71383C266B048500039BB4 /* AnimalTVC.swift */,
+				9E71384A266BFA8500039BB4 /* AddAnimalTVC.swift */,
+				9E71384C266BFE3200039BB4 /* AllAnimalsTVC.swift */,
 			);
 			path = "Animal UI";
 			sourceTree = "<group>";
@@ -222,10 +237,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E71383F266B080F00039BB4 /* Animal.swift in Sources */,
+				9E71384D266BFE3200039BB4 /* AllAnimalsTVC.swift in Sources */,
 				9E713847266B1A0200039BB4 /* BreedShow.swift in Sources */,
 				9E713841266B18DF00039BB4 /* BreedShowsTVC.swift in Sources */,
 				9E713833266B009200039BB4 /* ExhibitorDetailsVC.swift in Sources */,
+				9E713849266BF2E500039BB4 /* EditOCShowTVC.swift in Sources */,
 				9E71382F266ABA3600039BB4 /* OCShow.swift in Sources */,
+				9E713851266C359C00039BB4 /* ClassEntry.swift in Sources */,
 				9E642B13266046B300B08487 /* ExhibitorTVC.swift in Sources */,
 				9E71383B266B047500039BB4 /* AnimalDetailsVC.swift in Sources */,
 				9E642AFF266045D500B08487 /* AppDelegate.swift in Sources */,
@@ -234,7 +252,9 @@
 				9E71382D266AB76C00039BB4 /* OCShowTVC.swift in Sources */,
 				9E713843266B19A200039BB4 /* ClassEntryTVC.swift in Sources */,
 				9E642B152660485C00B08487 /* Exhibitor.swift in Sources */,
+				9E71384F266BFEB300039BB4 /* AllAnimal.swift in Sources */,
 				9E713831266ABB2200039BB4 /* OCShowDetailsVC.swift in Sources */,
+				9E71384B266BFA8500039BB4 /* AddAnimalTVC.swift in Sources */,
 				9E71383D266B048500039BB4 /* AnimalTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

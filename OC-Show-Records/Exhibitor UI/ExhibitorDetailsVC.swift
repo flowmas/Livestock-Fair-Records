@@ -43,6 +43,8 @@ class ExhibitorDetailsVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PushAnimalsScreen" {
             let destinationVC = segue.destination as! AnimalTVC
+            destinationVC.title = self.exhibitor.FirstName! + "'s Animals"
+
             destinationVC.exhibitor = self.exhibitor
         }
         

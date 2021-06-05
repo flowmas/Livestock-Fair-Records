@@ -1,16 +1,15 @@
 //
-//  ClassEntryTVC.swift
+//  AllAnimalsTVC.swift
 //  OC-Show-Records
 //
-//  Created by Sam Wolf on 6/4/21.
+//  Created by Sam Wolf on 6/5/21.
 //
 
 import UIKit
 
-class ClassEntryTVC: UITableViewController {
+class AllAnimalsTVC: UITableViewController {
 
-    var classEntries : [ClassEntry]? = nil
-    var breedShow: BreedShow!
+    var animals : [AllAnimal]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,17 +17,17 @@ class ClassEntryTVC: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let url = URL(string: "http://livestock-fair-records.com/get-classentry-by-breedshow1.php?breedshowID=\(breedShow.ID!)")!
-
+        let url = URL(string: "http://livestock-fair-records.com/get-animals-exhibitors.php")!
+        
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             print(String(data: data, encoding: .utf8)!)
             let decoder = JSONDecoder()
 
             do {
-                let classEntries = try decoder.decode([ClassEntry].self, from: data)
-                print(classEntries)
-                self.classEntries = classEntries
+                let animals = try decoder.decode([AllAnimal].self, from: data)
+                print(animals)
+                self.animals = animals
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -48,28 +47,57 @@ class ClassEntryTVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (self.classEntries == nil) {
+        if (self.animals == nil) {
             return 0
         }
-        return self.classEntries!.count
+        return self.animals!.count
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text =  "Code: " + self.classEntries![indexPath.row].EntryCodeID! + " | Tag: " + self.classEntries![indexPath.row].TagNumber!
+        cell.isUserInteractionEnabled = false
+        let tag = self.animals![indexPath.row].TagNumber!
+        let name = self.animals![indexPath.row].firstName! + " " + self.animals![indexPath.row].lastName!
+        cell.textLabel?.text = "EarTag: " + tag + " | Exhibitor: " + name
         return cell
     }
 
+    /*
+    // Override to support conditional editing of the table view.
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    */
 
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-        }
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
     }
+    */
 
+    /*
+    // Override to support rearranging the table view.
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+
+    }
+    */
+
+    /*
+    // Override to support conditional rearranging of the table view.
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
+    */
+
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -77,4 +105,6 @@ class ClassEntryTVC: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+    */
+
 }

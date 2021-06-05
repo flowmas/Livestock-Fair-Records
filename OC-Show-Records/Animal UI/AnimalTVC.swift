@@ -67,17 +67,29 @@ class AnimalTVC: UITableViewController {
         self.performSegue(withIdentifier: "PushAnimalDetailsScreen", sender: nil)
     }
     
-    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            
+            var components = URLComponents()
+
+            components.scheme = "http"
+            components.host = "livestock-fair-records.com"
+            components.path = "/delete-animal.php"
+            components.queryItems = [URLQueryItem(name: "tagnumber", value: "\(self.animals![indexPath.row].TagNumber!)"), ]
+            
+            let url = components.url!
+            
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in 
+                DispatchQueue.main.async {
+                    self.animals?.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+
+            }
+            task.resume()
+        }
     }
-    */
 
     // MARK: - Navigation
 
@@ -85,6 +97,12 @@ class AnimalTVC: UITableViewController {
         if segue.identifier == "PushAnimalDetailsScreen" {
             let destinationVC = segue.destination as! AnimalDetailsVC
             destinationVC.animal = self.animals![self.tableView.indexPathForSelectedRow!.row]
+        }
+        
+        if segue.identifier == "PresentAddAnimalScreen" {
+            let navVC = segue.destination as! UINavigationController
+            let destinationVC = navVC.topViewController as! AddAnimalTVC
+            destinationVC.exhibitorID = exhibitor.ID!
         }
     }
 
