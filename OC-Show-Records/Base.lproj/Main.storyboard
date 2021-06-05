@@ -436,7 +436,7 @@
         <!--Breed Shows-->
         <scene sceneID="Wip-Xc-o8G">
             <objects>
-                <tableViewController id="mC6-iC-WGl" sceneMemberID="viewController">
+                <tableViewController id="mC6-iC-WGl" customClass="BreedShowsTVC" customModule="OC_Show_Records" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RLB-gO-Zd7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -458,7 +458,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Breed Shows" id="GL2-uq-u0d"/>
                     <connections>
-                        <segue destination="Zze-xm-amq" kind="show" id="89O-Tj-tkk"/>
+                        <segue destination="Zze-xm-amq" kind="show" identifier="PushClassEntryScreen" id="89O-Tj-tkk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ttp-4a-CmO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -558,7 +558,7 @@
         <!--Class Entries-->
         <scene sceneID="yLI-CH-Wxu">
             <objects>
-                <tableViewController id="Zze-xm-amq" sceneMemberID="viewController">
+                <tableViewController id="Zze-xm-amq" customClass="ClassEntryTVC" customModule="OC_Show_Records" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e1I-kn-Apr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -581,12 +581,12 @@
                     <navigationItem key="navigationItem" title="Class Entries" id="egk-iH-G5n">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="s8b-VJ-H4R">
                             <connections>
-                                <segue destination="mfY-rc-z8N" kind="presentation" id="rWH-JY-6Vi"/>
+                                <segue destination="mfY-rc-z8N" kind="presentation" identifier="PresentAddClassEntryScreen" id="rWH-JY-6Vi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="USn-4Y-meY" kind="show" id="EOX-2F-R1m"/>
+                        <segue destination="USn-4Y-meY" kind="show" identifier="PushClassEntryDetailsScreen" id="EOX-2F-R1m"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lZ-XB-PC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -596,7 +596,7 @@
         <!--Class Entry-->
         <scene sceneID="fTX-Jq-noQ">
             <objects>
-                <viewController id="USn-4Y-meY" sceneMemberID="viewController">
+                <viewController id="USn-4Y-meY" customClass="ClassEntryDetailsVC" customModule="OC_Show_Records" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kU5-mv-JLo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
