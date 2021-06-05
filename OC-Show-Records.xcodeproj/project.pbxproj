@@ -18,6 +18,9 @@
 		9E71382F266ABA3600039BB4 /* OCShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71382E266ABA3600039BB4 /* OCShow.swift */; };
 		9E713831266ABB2200039BB4 /* OCShowDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713830266ABB2200039BB4 /* OCShowDetailsVC.swift */; };
 		9E713833266B009200039BB4 /* ExhibitorDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713832266B009200039BB4 /* ExhibitorDetailsVC.swift */; };
+		9E71383B266B047500039BB4 /* AnimalDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71383A266B047500039BB4 /* AnimalDetailsVC.swift */; };
+		9E71383D266B048500039BB4 /* AnimalTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71383C266B048500039BB4 /* AnimalTVC.swift */; };
+		9E71383F266B080F00039BB4 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71383E266B080F00039BB4 /* Animal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		9E71382E266ABA3600039BB4 /* OCShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCShow.swift; sourceTree = "<group>"; };
 		9E713830266ABB2200039BB4 /* OCShowDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCShowDetailsVC.swift; sourceTree = "<group>"; };
 		9E713832266B009200039BB4 /* ExhibitorDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitorDetailsVC.swift; sourceTree = "<group>"; };
+		9E71383A266B047500039BB4 /* AnimalDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsVC.swift; sourceTree = "<group>"; };
+		9E71383C266B048500039BB4 /* AnimalTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTVC.swift; sourceTree = "<group>"; };
+		9E71383E266B080F00039BB4 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 			children = (
 				9E642B142660485C00B08487 /* Exhibitor.swift */,
 				9E71382E266ABA3600039BB4 /* OCShow.swift */,
+				9E71383E266B080F00039BB4 /* Animal.swift */,
 			);
 			path = "JSON Structs";
 			sourceTree = "<group>";
@@ -112,6 +119,8 @@
 		9E713837266B00D400039BB4 /* Animal UI */ = {
 			isa = PBXGroup;
 			children = (
+				9E71383A266B047500039BB4 /* AnimalDetailsVC.swift */,
+				9E71383C266B048500039BB4 /* AnimalTVC.swift */,
 			);
 			path = "Animal UI";
 			sourceTree = "<group>";
@@ -200,14 +209,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E71383F266B080F00039BB4 /* Animal.swift in Sources */,
 				9E713833266B009200039BB4 /* ExhibitorDetailsVC.swift in Sources */,
 				9E71382F266ABA3600039BB4 /* OCShow.swift in Sources */,
 				9E642B13266046B300B08487 /* ExhibitorTVC.swift in Sources */,
+				9E71383B266B047500039BB4 /* AnimalDetailsVC.swift in Sources */,
 				9E642AFF266045D500B08487 /* AppDelegate.swift in Sources */,
 				9E642B01266045D500B08487 /* SceneDelegate.swift in Sources */,
 				9E71382D266AB76C00039BB4 /* OCShowTVC.swift in Sources */,
 				9E642B152660485C00B08487 /* Exhibitor.swift in Sources */,
 				9E713831266ABB2200039BB4 /* OCShowDetailsVC.swift in Sources */,
+				9E71383D266B048500039BB4 /* AnimalTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

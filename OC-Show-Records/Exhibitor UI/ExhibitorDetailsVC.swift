@@ -28,7 +28,11 @@ class ExhibitorDetailsVC: UIViewController {
         nameLabel.text = "Name: " + exhibitor.FirstName! + " " + exhibitor.LastName!
         emailLabel.text = "Email: " + exhibitor.Email!
         address1Label.text = "Address 1: " + exhibitor.Address1!
-        address2Label.text = "Address 2: " + exhibitor.Address2!
+        if let address2 = exhibitor.Address2 {
+            address2Label.text = "Address 2: " + address2
+        } else {
+            address2Label.text = "Address 2: (Empty)"
+        }
         cityLabel.text = "City: " + exhibitor.City!
         stateLabel.text = "State: " + exhibitor.State!
         zipLabel.text = "Zip: " + exhibitor.Zip!
@@ -38,7 +42,8 @@ class ExhibitorDetailsVC: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PushAnimalsScreen" {
-            
+            let destinationVC = segue.destination as! AnimalTVC
+            destinationVC.exhibitor = self.exhibitor
         }
         
         if segue.identifier == "PresentEditExhibitorScreen" {

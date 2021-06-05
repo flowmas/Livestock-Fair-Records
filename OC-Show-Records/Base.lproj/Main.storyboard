@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="4009" y="1797"/>
         </scene>
-        <!--Table View Controller-->
+        <!--AnimalTVC-->
         <scene sceneID="2oJ-DQ-sQY">
             <objects>
-                <tableViewController id="Eaf-oh-zwy" sceneMemberID="viewController">
+                <tableViewController id="Eaf-oh-zwy" customClass="AnimalTVC" customModule="OC_Show_Records" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Che-qF-P6E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,7 +185,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="PKq-d4-FbL" kind="show" id="1tM-ss-WUY"/>
+                        <segue destination="PKq-d4-FbL" kind="show" identifier="PushAnimalDetailsScreen" id="1tM-ss-WUY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFx-56-aVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -237,10 +237,10 @@
             </objects>
             <point key="canvasLocation" x="5887" y="962"/>
         </scene>
-        <!--View Controller-->
+        <!--Animal DetailsVC-->
         <scene sceneID="IA5-vf-1N7">
             <objects>
-                <viewController id="PKq-d4-FbL" sceneMemberID="viewController">
+                <viewController id="PKq-d4-FbL" customClass="AnimalDetailsVC" customModule="OC_Show_Records" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YdS-Ri-QCN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
