@@ -30,6 +30,13 @@
 		9E71384D266BFE3200039BB4 /* AllAnimalsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71384C266BFE3200039BB4 /* AllAnimalsTVC.swift */; };
 		9E71384F266BFEB300039BB4 /* AllAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71384E266BFEB300039BB4 /* AllAnimal.swift */; };
 		9E713851266C359C00039BB4 /* ClassEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713850266C359C00039BB4 /* ClassEntry.swift */; };
+		9E713853266C3A0B00039BB4 /* AddExhibitorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713852266C3A0B00039BB4 /* AddExhibitorTVC.swift */; };
+		9E713855266C3AC600039BB4 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713854266C3AC600039BB4 /* State.swift */; };
+		9E713857266C463A00039BB4 /* ExportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713856266C463A00039BB4 /* ExportVC.swift */; };
+		9E713859266C47A700039BB4 /* ExhibitorClassEntriesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713858266C47A700039BB4 /* ExhibitorClassEntriesTVC.swift */; };
+		9E71385B266C47CF00039BB4 /* ExhibitorClassEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71385A266C47CF00039BB4 /* ExhibitorClassEntry.swift */; };
+		9E71385D266C4EE000039BB4 /* AddClassEntryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71385C266C4EE000039BB4 /* AddClassEntryTVC.swift */; };
+		9E71385F266C4F4D00039BB4 /* EntryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71385E266C4F4D00039BB4 /* EntryCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +65,13 @@
 		9E71384C266BFE3200039BB4 /* AllAnimalsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnimalsTVC.swift; sourceTree = "<group>"; };
 		9E71384E266BFEB300039BB4 /* AllAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnimal.swift; sourceTree = "<group>"; };
 		9E713850266C359C00039BB4 /* ClassEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassEntry.swift; sourceTree = "<group>"; };
+		9E713852266C3A0B00039BB4 /* AddExhibitorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExhibitorTVC.swift; sourceTree = "<group>"; };
+		9E713854266C3AC600039BB4 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		9E713856266C463A00039BB4 /* ExportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportVC.swift; sourceTree = "<group>"; };
+		9E713858266C47A700039BB4 /* ExhibitorClassEntriesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitorClassEntriesTVC.swift; sourceTree = "<group>"; };
+		9E71385A266C47CF00039BB4 /* ExhibitorClassEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitorClassEntry.swift; sourceTree = "<group>"; };
+		9E71385C266C4EE000039BB4 /* AddClassEntryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassEntryTVC.swift; sourceTree = "<group>"; };
+		9E71385E266C4F4D00039BB4 /* EntryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				9E642B04266045D500B08487 /* Main.storyboard */,
+				9E713856266C463A00039BB4 /* ExportVC.swift */,
 				9E713836266B00AB00039BB4 /* JSON Structs */,
 				9E713839266B00E600039BB4 /* Breed Show UI */,
 				9E713838266B00DD00039BB4 /* Class Entry UI */,
@@ -121,6 +136,7 @@
 			children = (
 				9E713832266B009200039BB4 /* ExhibitorDetailsVC.swift */,
 				9E642B12266046B300B08487 /* ExhibitorTVC.swift */,
+				9E713852266C3A0B00039BB4 /* AddExhibitorTVC.swift */,
 			);
 			path = "Exhibitor UI";
 			sourceTree = "<group>";
@@ -134,6 +150,9 @@
 				9E713846266B1A0200039BB4 /* BreedShow.swift */,
 				9E71384E266BFEB300039BB4 /* AllAnimal.swift */,
 				9E713850266C359C00039BB4 /* ClassEntry.swift */,
+				9E713854266C3AC600039BB4 /* State.swift */,
+				9E71385A266C47CF00039BB4 /* ExhibitorClassEntry.swift */,
+				9E71385E266C4F4D00039BB4 /* EntryCode.swift */,
 			);
 			path = "JSON Structs";
 			sourceTree = "<group>";
@@ -154,6 +173,8 @@
 			children = (
 				9E713842266B19A200039BB4 /* ClassEntryTVC.swift */,
 				9E713844266B19D400039BB4 /* ClassEntryDetailsVC.swift */,
+				9E713858266C47A700039BB4 /* ExhibitorClassEntriesTVC.swift */,
+				9E71385C266C4EE000039BB4 /* AddClassEntryTVC.swift */,
 			);
 			path = "Class Entry UI";
 			sourceTree = "<group>";
@@ -236,9 +257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E713857266C463A00039BB4 /* ExportVC.swift in Sources */,
 				9E71383F266B080F00039BB4 /* Animal.swift in Sources */,
 				9E71384D266BFE3200039BB4 /* AllAnimalsTVC.swift in Sources */,
 				9E713847266B1A0200039BB4 /* BreedShow.swift in Sources */,
+				9E713855266C3AC600039BB4 /* State.swift in Sources */,
+				9E71385D266C4EE000039BB4 /* AddClassEntryTVC.swift in Sources */,
 				9E713841266B18DF00039BB4 /* BreedShowsTVC.swift in Sources */,
 				9E713833266B009200039BB4 /* ExhibitorDetailsVC.swift in Sources */,
 				9E713849266BF2E500039BB4 /* EditOCShowTVC.swift in Sources */,
@@ -246,6 +270,8 @@
 				9E713851266C359C00039BB4 /* ClassEntry.swift in Sources */,
 				9E642B13266046B300B08487 /* ExhibitorTVC.swift in Sources */,
 				9E71383B266B047500039BB4 /* AnimalDetailsVC.swift in Sources */,
+				9E713859266C47A700039BB4 /* ExhibitorClassEntriesTVC.swift in Sources */,
+				9E71385B266C47CF00039BB4 /* ExhibitorClassEntry.swift in Sources */,
 				9E642AFF266045D500B08487 /* AppDelegate.swift in Sources */,
 				9E713845266B19D400039BB4 /* ClassEntryDetailsVC.swift in Sources */,
 				9E642B01266045D500B08487 /* SceneDelegate.swift in Sources */,
@@ -255,7 +281,9 @@
 				9E71384F266BFEB300039BB4 /* AllAnimal.swift in Sources */,
 				9E713831266ABB2200039BB4 /* OCShowDetailsVC.swift in Sources */,
 				9E71384B266BFA8500039BB4 /* AddAnimalTVC.swift in Sources */,
+				9E71385F266C4F4D00039BB4 /* EntryCode.swift in Sources */,
 				9E71383D266B048500039BB4 /* AnimalTVC.swift in Sources */,
+				9E713853266C3A0B00039BB4 /* AddExhibitorTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

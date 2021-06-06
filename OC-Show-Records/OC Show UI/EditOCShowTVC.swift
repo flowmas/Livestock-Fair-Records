@@ -36,7 +36,19 @@ class EditOCShowTVC: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
-        let url = URL(string: "http://livestock-fair-records.com/update-ocshow2.php?ocshowID=1&judgeName=\(self.judgeTextField.text!)&superintendentName=\(superTextField.text!)")!
+        
+        var components = URLComponents()
+
+        components.scheme = "http"
+        components.host = "livestock-fair-records.com"
+        components.path = "/get-classentries-by-exhibitor.php"
+        components.queryItems = []
+        components.queryItems?.append(URLQueryItem(name: "ocshowID", value: "1"))
+        components.queryItems?.append(URLQueryItem(name: "judgeName", value: "\(self.judgeTextField.text!)"))
+        components.queryItems?.append(URLQueryItem(name: "superintendentName", value: "\(superTextField.text!)"))
+        
+        let url = components.url!
+        print(url)
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {

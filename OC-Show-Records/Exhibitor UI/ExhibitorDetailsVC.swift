@@ -48,8 +48,12 @@ class ExhibitorDetailsVC: UIViewController {
             destinationVC.exhibitor = self.exhibitor
         }
         
-        if segue.identifier == "PresentEditExhibitorScreen" {
-            
+        if segue.identifier == "PresentExhibitorClassEntriesScreen" {
+            let nacVC = segue.destination as! UINavigationController
+            let destinationVC = nacVC.topViewController as! ExhibitorClassEntriesTVC
+            destinationVC.title = self.exhibitor.FirstName! + "'s Class Entries"
+            destinationVC.exhibitor = self.exhibitor
         }
+
     }
 }
