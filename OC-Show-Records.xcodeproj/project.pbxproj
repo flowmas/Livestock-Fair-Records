@@ -37,6 +37,7 @@
 		9E71385B266C47CF00039BB4 /* ExhibitorClassEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71385A266C47CF00039BB4 /* ExhibitorClassEntry.swift */; };
 		9E71385D266C4EE000039BB4 /* AddClassEntryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71385C266C4EE000039BB4 /* AddClassEntryTVC.swift */; };
 		9E71385F266C4F4D00039BB4 /* EntryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71385E266C4F4D00039BB4 /* EntryCode.swift */; };
+		9E713861266C6DBC00039BB4 /* EditClassEntryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713860266C6DBB00039BB4 /* EditClassEntryTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		9E71385A266C47CF00039BB4 /* ExhibitorClassEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitorClassEntry.swift; sourceTree = "<group>"; };
 		9E71385C266C4EE000039BB4 /* AddClassEntryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassEntryTVC.swift; sourceTree = "<group>"; };
 		9E71385E266C4F4D00039BB4 /* EntryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCode.swift; sourceTree = "<group>"; };
+		9E713860266C6DBB00039BB4 /* EditClassEntryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditClassEntryTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				9E713844266B19D400039BB4 /* ClassEntryDetailsVC.swift */,
 				9E713858266C47A700039BB4 /* ExhibitorClassEntriesTVC.swift */,
 				9E71385C266C4EE000039BB4 /* AddClassEntryTVC.swift */,
+				9E713860266C6DBB00039BB4 /* EditClassEntryTVC.swift */,
 			);
 			path = "Class Entry UI";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				9E71385B266C47CF00039BB4 /* ExhibitorClassEntry.swift in Sources */,
 				9E642AFF266045D500B08487 /* AppDelegate.swift in Sources */,
 				9E713845266B19D400039BB4 /* ClassEntryDetailsVC.swift in Sources */,
+				9E713861266C6DBC00039BB4 /* EditClassEntryTVC.swift in Sources */,
 				9E642B01266045D500B08487 /* SceneDelegate.swift in Sources */,
 				9E71382D266AB76C00039BB4 /* OCShowTVC.swift in Sources */,
 				9E713843266B19A200039BB4 /* ClassEntryTVC.swift in Sources */,

@@ -58,7 +58,7 @@ class AnimalTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let animal = self.animals![indexPath.row]
-        cell.accessoryType = .disclosureIndicator
+        cell.isUserInteractionEnabled = false
         cell.textLabel?.text = "Breed: " + animal.Breed! + " | TagNumber: " + animal.TagNumber!
         return cell
     }

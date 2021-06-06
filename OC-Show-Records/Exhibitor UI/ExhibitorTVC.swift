@@ -73,11 +73,25 @@ class ExhibitorTVC: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            
+            var components = URLComponents()
+
+            components.scheme = "http"
+            components.host = "livestock-fair-records.com"
+            components.path = "/delete-exhibitor.php"
+            components.queryItems = [URLQueryItem(name: "exhibitorID", value: "\(self.exhibitors![indexPath.row].ID!)"), ]
+            
+            let url = components.url!
+            
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                DispatchQueue.main.async {
+                    self.exhibitors?.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+
+            }
+            task.resume()
+        }   
     }
 
     

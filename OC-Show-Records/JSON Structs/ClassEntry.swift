@@ -11,6 +11,7 @@ struct ClassEntry: Codable {
     var ID: String?
     var AnimalID: String?
     var EntryCodeID: String?
+    var SpecialPlacementID: String?
     var Placement: String?
     var Premium: String?
     var IsVerified: String?

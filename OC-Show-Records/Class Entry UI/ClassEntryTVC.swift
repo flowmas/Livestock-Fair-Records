@@ -57,16 +57,37 @@ class ClassEntryTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        cell.accessoryType = .disclosureIndicator
         cell.textLabel?.text =  "Code: " + self.classEntries![indexPath.row].EntryCodeID! + " | Tag: " + self.classEntries![indexPath.row].TagNumber!
         return cell
     }
 
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "PushClassEntryDetailsScreen", sender: nil)
+    }
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            var components = URLComponents()
+
+            components.scheme = "http"
+            components.host = "livestock-fair-records.com"
+            components.path = "/delete-classentry.php"
+            components.queryItems = [URLQueryItem(name: "ID", value: "\(self.classEntries![indexPath.row].ID!)"), ]
+            
+            let url = components.url!
+            
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                DispatchQueue.main.async {
+                    self.classEntries?.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+
+            }
+            task.resume()
+
         }
     }
 
@@ -77,6 +98,12 @@ class ClassEntryTVC: UITableViewController {
         if segue.identifier == "PresentAddClassEntryScreen" {
             let navVC = segue.destination as! UINavigationController
             let destinationVC = navVC.topViewController as! AddClassEntryTVC
+            destinationVC.breedShow = self.breedShow
+        }
+        
+        if segue.identifier == "PushClassEntryDetailsScreen" {
+            let destinationVC = segue.destination as! ClassEntryDetailsVC
+            destinationVC.classEntry = self.classEntries![self.tableView.indexPathForSelectedRow!.row]
             destinationVC.breedShow = self.breedShow
         }
     }
