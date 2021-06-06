@@ -38,6 +38,11 @@
 		9E71385D266C4EE000039BB4 /* AddClassEntryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71385C266C4EE000039BB4 /* AddClassEntryTVC.swift */; };
 		9E71385F266C4F4D00039BB4 /* EntryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71385E266C4F4D00039BB4 /* EntryCode.swift */; };
 		9E713861266C6DBC00039BB4 /* EditClassEntryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713860266C6DBB00039BB4 /* EditClassEntryTVC.swift */; };
+		9E713863266D1D3700039BB4 /* PhoneInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713862266D1D3700039BB4 /* PhoneInfoTVC.swift */; };
+		9E713865266D1D7E00039BB4 /* PhoneInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713864266D1D7E00039BB4 /* PhoneInfo.swift */; };
+		9E713867266D1D8900039BB4 /* PhoneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713866266D1D8900039BB4 /* PhoneType.swift */; };
+		9E713869266D1FA700039BB4 /* AddPhoneInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E713868266D1FA700039BB4 /* AddPhoneInfoTVC.swift */; };
+		9E71386B266D274C00039BB4 /* Winners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71386A266D274C00039BB4 /* Winners.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +79,11 @@
 		9E71385C266C4EE000039BB4 /* AddClassEntryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassEntryTVC.swift; sourceTree = "<group>"; };
 		9E71385E266C4F4D00039BB4 /* EntryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCode.swift; sourceTree = "<group>"; };
 		9E713860266C6DBB00039BB4 /* EditClassEntryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditClassEntryTVC.swift; sourceTree = "<group>"; };
+		9E713862266D1D3700039BB4 /* PhoneInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInfoTVC.swift; sourceTree = "<group>"; };
+		9E713864266D1D7E00039BB4 /* PhoneInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInfo.swift; sourceTree = "<group>"; };
+		9E713866266D1D8900039BB4 /* PhoneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneType.swift; sourceTree = "<group>"; };
+		9E713868266D1FA700039BB4 /* AddPhoneInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneInfoTVC.swift; sourceTree = "<group>"; };
+		9E71386A266D274C00039BB4 /* Winners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Winners.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +149,8 @@
 				9E713832266B009200039BB4 /* ExhibitorDetailsVC.swift */,
 				9E642B12266046B300B08487 /* ExhibitorTVC.swift */,
 				9E713852266C3A0B00039BB4 /* AddExhibitorTVC.swift */,
+				9E713862266D1D3700039BB4 /* PhoneInfoTVC.swift */,
+				9E713868266D1FA700039BB4 /* AddPhoneInfoTVC.swift */,
 			);
 			path = "Exhibitor UI";
 			sourceTree = "<group>";
@@ -155,6 +167,9 @@
 				9E713854266C3AC600039BB4 /* State.swift */,
 				9E71385A266C47CF00039BB4 /* ExhibitorClassEntry.swift */,
 				9E71385E266C4F4D00039BB4 /* EntryCode.swift */,
+				9E713864266D1D7E00039BB4 /* PhoneInfo.swift */,
+				9E713866266D1D8900039BB4 /* PhoneType.swift */,
+				9E71386A266D274C00039BB4 /* Winners.swift */,
 			);
 			path = "JSON Structs";
 			sourceTree = "<group>";
@@ -272,18 +287,23 @@
 				9E71382F266ABA3600039BB4 /* OCShow.swift in Sources */,
 				9E713851266C359C00039BB4 /* ClassEntry.swift in Sources */,
 				9E642B13266046B300B08487 /* ExhibitorTVC.swift in Sources */,
+				9E713869266D1FA700039BB4 /* AddPhoneInfoTVC.swift in Sources */,
 				9E71383B266B047500039BB4 /* AnimalDetailsVC.swift in Sources */,
 				9E713859266C47A700039BB4 /* ExhibitorClassEntriesTVC.swift in Sources */,
 				9E71385B266C47CF00039BB4 /* ExhibitorClassEntry.swift in Sources */,
+				9E71386B266D274C00039BB4 /* Winners.swift in Sources */,
 				9E642AFF266045D500B08487 /* AppDelegate.swift in Sources */,
+				9E713863266D1D3700039BB4 /* PhoneInfoTVC.swift in Sources */,
 				9E713845266B19D400039BB4 /* ClassEntryDetailsVC.swift in Sources */,
 				9E713861266C6DBC00039BB4 /* EditClassEntryTVC.swift in Sources */,
 				9E642B01266045D500B08487 /* SceneDelegate.swift in Sources */,
 				9E71382D266AB76C00039BB4 /* OCShowTVC.swift in Sources */,
 				9E713843266B19A200039BB4 /* ClassEntryTVC.swift in Sources */,
+				9E713865266D1D7E00039BB4 /* PhoneInfo.swift in Sources */,
 				9E642B152660485C00B08487 /* Exhibitor.swift in Sources */,
 				9E71384F266BFEB300039BB4 /* AllAnimal.swift in Sources */,
 				9E713831266ABB2200039BB4 /* OCShowDetailsVC.swift in Sources */,
+				9E713867266D1D8900039BB4 /* PhoneType.swift in Sources */,
 				9E71384B266BFA8500039BB4 /* AddAnimalTVC.swift in Sources */,
 				9E71385F266C4F4D00039BB4 /* EntryCode.swift in Sources */,
 				9E71383D266B048500039BB4 /* AnimalTVC.swift in Sources */,

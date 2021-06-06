@@ -54,6 +54,12 @@ class ExhibitorDetailsVC: UIViewController {
             destinationVC.title = self.exhibitor.FirstName! + "'s Class Entries"
             destinationVC.exhibitor = self.exhibitor
         }
+        
+        if segue.identifier == "PushPhoneNumberScreen" {
+            let destinationVC = segue.destination as! PhoneInfoTVC
+            destinationVC.title = self.exhibitor.FirstName! + "'s Phone Numbers"
+            destinationVC.exhibitor = self.exhibitor
+        }
 
     }
 }

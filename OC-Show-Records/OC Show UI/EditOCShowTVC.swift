@@ -41,7 +41,7 @@ class EditOCShowTVC: UITableViewController, UITextFieldDelegate {
 
         components.scheme = "http"
         components.host = "livestock-fair-records.com"
-        components.path = "/get-classentries-by-exhibitor.php"
+        components.path = "/update-ocshow2.php"
         components.queryItems = []
         components.queryItems?.append(URLQueryItem(name: "ocshowID", value: "1"))
         components.queryItems?.append(URLQueryItem(name: "judgeName", value: "\(self.judgeTextField.text!)"))

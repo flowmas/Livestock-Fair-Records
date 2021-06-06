@@ -150,7 +150,7 @@
         <!--<Name>'s Phone Numbers-->
         <scene sceneID="Y5D-y6-QlP">
             <objects>
-                <tableViewController id="wct-0d-2Nh" sceneMemberID="viewController">
+                <tableViewController id="wct-0d-2Nh" customClass="PhoneInfoTVC" customModule="OC_Show_Records" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FeX-la-uEN">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,7 +173,7 @@
                     <navigationItem key="navigationItem" title="&lt;Name&gt;'s Phone Numbers" id="fnB-ja-gE9">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="u1m-uX-stE">
                             <connections>
-                                <segue destination="Rfo-8u-SfS" kind="presentation" id="jf9-FS-BwA"/>
+                                <segue destination="Rfo-8u-SfS" kind="presentation" identifier="PresentAddPhoneInfoScreen" id="jf9-FS-BwA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -185,29 +185,73 @@
         <!--Add Phone Number-->
         <scene sceneID="2t0-AC-7lB">
             <objects>
-                <tableViewController id="Uik-HE-5EV" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UQz-SS-M5F">
+                <tableViewController id="Uik-HE-5EV" customClass="AddPhoneInfoTVC" customModule="OC_Show_Records" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UQz-SS-M5F">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZdR-Nv-Vmj">
-                                <rect key="frame" x="0.0" y="24.5" width="704" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZdR-Nv-Vmj" id="UGH-TZ-nsm">
-                                    <rect key="frame" x="0.0" y="0.0" width="704" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <sections>
+                            <tableViewSection id="gk7-o9-9Vj">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43.5" id="ZdR-Nv-Vmj">
+                                        <rect key="frame" x="0.0" y="24.5" width="704" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZdR-Nv-Vmj" id="UGH-TZ-nsm">
+                                            <rect key="frame" x="0.0" y="0.0" width="704" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Number:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6YX-qj-Tbp">
+                                                    <rect key="frame" x="20" y="0.0" width="684" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6YX-qj-Tbp" firstAttribute="leading" secondItem="UGH-TZ-nsm" secondAttribute="leading" constant="20" id="5At-Qw-NzU"/>
+                                                <constraint firstAttribute="bottom" secondItem="6YX-qj-Tbp" secondAttribute="bottom" id="9uy-nJ-COg"/>
+                                                <constraint firstAttribute="trailing" secondItem="6YX-qj-Tbp" secondAttribute="trailing" id="WS9-eG-VHH"/>
+                                                <constraint firstItem="6YX-qj-Tbp" firstAttribute="top" secondItem="UGH-TZ-nsm" secondAttribute="top" id="fPh-P1-cVb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="250" id="0tN-P0-c3d">
+                                        <rect key="frame" x="0.0" y="68" width="704" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0tN-P0-c3d" id="LHH-FK-wY6">
+                                            <rect key="frame" x="0.0" y="0.0" width="704" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqC-u8-te5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="704" height="250"/>
+                                                </pickerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hqC-u8-te5" firstAttribute="top" secondItem="LHH-FK-wY6" secondAttribute="top" id="K9c-3u-9yi"/>
+                                                <constraint firstAttribute="trailing" secondItem="hqC-u8-te5" secondAttribute="trailing" id="UZH-VL-Ijl"/>
+                                                <constraint firstItem="hqC-u8-te5" firstAttribute="leading" secondItem="LHH-FK-wY6" secondAttribute="leading" id="oEf-2F-230"/>
+                                                <constraint firstAttribute="bottom" secondItem="hqC-u8-te5" secondAttribute="bottom" id="vkq-aR-iGF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="Uik-HE-5EV" id="pt0-60-dOf"/>
                             <outlet property="delegate" destination="Uik-HE-5EV" id="5XS-vr-k0Q"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Phone Number" id="TIt-HY-Rxv">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="yMb-nz-orP"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="yMb-nz-orP">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="Uik-HE-5EV" id="3l2-cu-t0u"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="numberTF" destination="6YX-qj-Tbp" id="ukQ-YY-L70"/>
+                        <outlet property="pickerView" destination="hqC-u8-te5" id="q4m-if-6HK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNS-Zb-6mX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1468,6 +1512,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0F-VJ-j6B">
                                 <rect key="frame" x="382" y="525" width="46" height="30"/>
                                 <state key="normal" title="Export"/>
+                                <connections>
+                                    <action selector="exportButtonTapped:" destination="WRH-7P-7w2" eventType="touchUpInside" id="pFg-tn-uh8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w1A-fq-UNH"/>
@@ -1478,6 +1525,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Results" image="rosette" catalog="system" selectedImage="rosette" id="bia-v4-74P"/>
+                    <connections>
+                        <outlet property="exportButton" destination="m0F-VJ-j6B" id="Vqn-Zd-FfJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkG-LG-70b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
